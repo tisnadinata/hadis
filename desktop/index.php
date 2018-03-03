@@ -127,17 +127,17 @@
 <script>
 $(document).ready(function() {
 	$("#riwayat").change( function(){
-        alert(this.value);
-		// $.ajax({
-		// 	type: "POST",
-		// 	url: "ajax.php",
-		// 	data: data,
-		// 	cache: false,
-		// 	success: function(html) {
-		// 		$("#biayaAsuransi").html(html);
-		// 		refreshOngkirDanTotal();
-		// 	}
-		// });	
+        var data = "pilihriwayat="+this.value;
+		$.ajax({
+			type: "POST",
+			url: "ajax.php",
+			data: data,
+			cache: false,
+			success: function(html) {
+                alert(html);
+				$("#kitab").html(html);
+			}
+		});	
 	});
 });
 </script>
