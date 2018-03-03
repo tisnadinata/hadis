@@ -18,7 +18,7 @@
 	
 	function getDataByCollumn($table_name,$field_name,$value){
 		global $mysqli;
-		$stmt = $mysqli->query("select * from $table_name where $field_name='$value'");
+		$stmt = $mysqli->query('select * from $table_name where $field_name LIKE "$value"');
 		return $stmt;		
 	}
 	function getDataCount($table_name,$field_name,$value){
