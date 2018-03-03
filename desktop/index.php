@@ -1,9 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost","appstudio_tisnadinata","Appstudio27","appstudio_hadis");
-if (mysqli_connect_errno()){
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-$mysqli->query("SET NAMES 'utf8'");
+    include "../config/config_db.php";
 ?>
 <!doctype html>
 <html lang="en">
